@@ -1,0 +1,17 @@
+# Per-store config for capture.py. Copy to config.yaml (gitignored) per store.
+# Only per-store input needed; vendors.json + cmp_profiles.json are shared.
+store_domain: examplestore.com          # primary domain (also matches www.)
+home_url: https://examplestore.com/
+collection_url: https://examplestore.com/collections/all
+pdp_url: https://examplestore.com/products/example-product
+cart_url: https://examplestore.com/cart
+
+# Add-to-cart: give a selector OR a variant_id (variant_id uses Shopify /cart/add.js).
+add_to_cart_selector: "form[action='/cart/add'] button[type='submit'], button[name='add']"
+# variant_id: 1234567890
+
+# Optional: only if the store's CMP isn't auto-detected by cmp_profiles.json.
+# cmp:
+#   name: custom
+#   accept: "#my-accept-btn"
+#   decline: "#my-decline-btn"

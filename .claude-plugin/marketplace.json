@@ -1,0 +1,25 @@
+{
+  "name": "kgelster-cookie",
+  "description": "Cookie-consent and CIPA exposure auditing for ecommerce stores as an agent skill: forensic consent-state capture, deterministic tracker classification, counsel-facing reporting.",
+  "owner": {
+    "name": "Kurt Elster"
+  },
+  "plugins": [
+    {
+      "name": "cookie-audit",
+      "source": "./",
+      "description": "Captures a storefront in four consent states (no interaction, decline, accept, GPC) with isolated Playwright contexts, classifies every third-party request and cookie against a versioned vendor registry, and reports what fired pre-consent, post-decline, and despite GPC. Built for CIPA / wiretap / pen-register demand-letter triage on Shopify stores.",
+      "category": "ecommerce",
+      "tags": [
+        "shopify",
+        "cookie-consent",
+        "cipa",
+        "privacy",
+        "har",
+        "gpc",
+        "trackers",
+        "agent-skills"
+      ]
+    }
+  ]
+}

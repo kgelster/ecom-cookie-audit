@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+config.yaml
+captures/
+findings.json
+*.har
+.DS_Store

@@ -1,0 +1,54 @@
+{
+  "_comment": "Known Shopify CMP banners -> selectors capture.py uses to auto-drive accept/decline. 'detect' = a selector whose presence identifies the CMP. Order matters: capture.py tries each profile's detect selector and uses the first match. If none match, capture.py falls back to config.yaml's inline cmp selectors, and if those are absent it aborts with a clear message (no silent mis-capture). Add a profile when you meet a new CMP in the wild.",
+  "version": "2026-07-01",
+  "profiles": [
+    {
+      "cmp": "shopify-native",
+      "detect": ".shopify-pc__banner, [data-shopify-privacy-banner]",
+      "accept": ".shopify-pc__banner__btn-accept, button[data-consent='accept']",
+      "decline": ".shopify-pc__banner__btn-decline, button[data-consent='decline']"
+    },
+    {
+      "cmp": "pandectes",
+      "detect": "#pandectes-gdpr, .pandectes-gdpr-banner",
+      "accept": "#pandectes-gdpr .pandectes-accept, button.pandectes-gdpr-accept",
+      "decline": "#pandectes-gdpr .pandectes-decline, button.pandectes-gdpr-decline"
+    },
+    {
+      "cmp": "consentmo",
+      "detect": "#consentmo-gdpr-cookie-bar, .consentmo-gdpr-banner",
+      "accept": "#consentmo-gdpr-cookie-bar .accept-all, .consentmo-accept-all",
+      "decline": "#consentmo-gdpr-cookie-bar .decline-all, .consentmo-decline-all"
+    },
+    {
+      "cmp": "iubenda",
+      "detect": "#iubenda-cs-banner, .iubenda-cs-container",
+      "accept": ".iubenda-cs-accept-btn",
+      "decline": ".iubenda-cs-reject-btn"
+    },
+    {
+      "cmp": "onetrust",
+      "detect": "#onetrust-banner-sdk, #onetrust-consent-sdk",
+      "accept": "#onetrust-accept-btn-handler",
+      "decline": "#onetrust-reject-all-handler"
+    },
+    {
+      "cmp": "cookieyes",
+      "detect": ".cky-consent-bar, #cookie-law-info-bar",
+      "accept": ".cky-btn-accept, #cookie_action_close_header",
+      "decline": ".cky-btn-reject, #wt-cli-reject-btn"
+    },
+    {
+      "cmp": "klaviyo",
+      "detect": ".klaviyo-consent-banner",
+      "accept": ".klaviyo-consent-accept",
+      "decline": ".klaviyo-consent-decline"
+    },
+    {
+      "cmp": "isense-gdpr",
+      "detect": "#gdpr-cookie-message, .gdpr-cookie-notice",
+      "accept": "#gdpr-cookie-accept, .gdpr-cookie-accept",
+      "decline": "#gdpr-cookie-decline, .gdpr-cookie-decline"
+    }
+  ]
+}

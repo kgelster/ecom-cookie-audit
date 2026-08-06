@@ -1,0 +1,23 @@
+{
+  "name": "cookie-audit",
+  "version": "1.0.0",
+  "description": "Cookie-consent / CIPA audit pipeline for ecommerce storefronts: forensic multi-consent-state HAR capture (none/decline/accept/GPC) with Playwright, deterministic vendor classification against a versioned registry, and a counsel-facing diagnostic report. Diagnoses observable network behavior; never asserts legal conclusions.",
+  "author": {
+    "name": "Kurt Elster"
+  },
+  "homepage": "https://github.com/kgelster/ecom-cookie-audit",
+  "repository": "https://github.com/kgelster/ecom-cookie-audit",
+  "license": "MIT",
+  "keywords": [
+    "shopify",
+    "cookie-consent",
+    "cipa",
+    "privacy",
+    "har",
+    "gpc",
+    "tracker",
+    "consent-management",
+    "agent-skills",
+    "claude-code"
+  ]
+}

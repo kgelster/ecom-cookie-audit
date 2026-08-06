@@ -1,0 +1,1206 @@
+{
+  "_comment": "Deterministic vendor registry for the cookie-audit skill. Domains -> {vendor, category}. Matching is host == domain OR host endswith '.'+domain, most-specific (longest) domain wins. Grows every audit run: promote hosts out of a report's 'unclassified' list into this registry. cipa_sensitive categories are the pen-register/wiretap-theory targets a report flags. This file is the authoritative classifier: nothing is model-guessed. Unknown domains are reported as 'unclassified - analyst review required'.",
+  "version": "2026-07-01b",
+  "cipa_sensitive_categories": [
+    "analytics",
+    "ads-pixel",
+    "session-replay",
+    "chat",
+    "email-sms",
+    "fraud-fingerprint"
+  ],
+  "first_party_infra": [
+    "cdn.shopify.com",
+    "shopifycdn.com",
+    "shopifycloud.com",
+    "shopifysvc.com",
+    "myshopify.com",
+    "shopifypreview.com"
+  ],
+  "vendors": [
+    {
+      "domains": [
+        "google-analytics.com",
+        "analytics.google.com",
+        "ssl.google-analytics.com"
+      ],
+      "vendor": "Google Analytics",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "googletagmanager.com"
+      ],
+      "vendor": "Google Tag Manager",
+      "category": "tag-manager"
+    },
+    {
+      "domains": [
+        "google.com",
+        "www.google.com"
+      ],
+      "vendor": "Google (GA4/Ads collect, mixed)",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "merchant-center-analytics.goog"
+      ],
+      "vendor": "Google Merchant Center",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "region1.google-analytics.com",
+        "region1.analytics.google.com"
+      ],
+      "vendor": "Google Analytics (regional)",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "plausible.io"
+      ],
+      "vendor": "Plausible",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "mixpanel.com",
+        "mxpnl.com"
+      ],
+      "vendor": "Mixpanel",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "segment.com",
+        "segment.io",
+        "cdn.segment.com"
+      ],
+      "vendor": "Segment",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "amplitude.com"
+      ],
+      "vendor": "Amplitude",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "heap.io",
+        "heapanalytics.com"
+      ],
+      "vendor": "Heap",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "northbeam.io"
+      ],
+      "vendor": "Northbeam",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "triplewhale.com",
+        "triplewhale.io",
+        "tw-cdn.com"
+      ],
+      "vendor": "Triple Whale",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "elevar.com",
+        "getelevar.com"
+      ],
+      "vendor": "Elevar",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "doubleclick.net"
+      ],
+      "vendor": "Google DoubleClick",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "googlesyndication.com"
+      ],
+      "vendor": "Google Ads (syndication)",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "googleadservices.com"
+      ],
+      "vendor": "Google Ads (conversion)",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "facebook.com",
+        "facebook.net",
+        "connect.facebook.net",
+        "fbcdn.net"
+      ],
+      "vendor": "Meta Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "tiktok.com",
+        "analytics.tiktok.com",
+        "tiktokcdn.com",
+        "ttlivecdn.com"
+      ],
+      "vendor": "TikTok Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "snapchat.com",
+        "sc-static.net",
+        "tr.snapchat.com"
+      ],
+      "vendor": "Snapchat Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "pinterest.com",
+        "pinimg.com",
+        "ct.pinterest.com"
+      ],
+      "vendor": "Pinterest Tag",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "bat.bing.com",
+        "bing.com",
+        "clarity.ms"
+      ],
+      "vendor": "Microsoft/Bing",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "criteo.com",
+        "criteo.net"
+      ],
+      "vendor": "Criteo",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "taboola.com"
+      ],
+      "vendor": "Taboola",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "outbrain.com"
+      ],
+      "vendor": "Outbrain",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "reddit.com",
+        "redditstatic.com",
+        "rdt.com"
+      ],
+      "vendor": "Reddit Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "ads-twitter.com",
+        "t.co",
+        "analytics.twitter.com"
+      ],
+      "vendor": "X/Twitter Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "adroll.com"
+      ],
+      "vendor": "AdRoll",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "awin1.com",
+        "awin.com",
+        "dwin1.com"
+      ],
+      "vendor": "Awin",
+      "category": "affiliate"
+    },
+    {
+      "domains": [
+        "impact.com",
+        "impactradius-event.com"
+      ],
+      "vendor": "Impact",
+      "category": "affiliate"
+    },
+    {
+      "domains": [
+        "shareasale.com"
+      ],
+      "vendor": "ShareASale",
+      "category": "affiliate"
+    },
+    {
+      "domains": [
+        "refersion.com"
+      ],
+      "vendor": "Refersion",
+      "category": "affiliate"
+    },
+    {
+      "domains": [
+        "pepperjam.com"
+      ],
+      "vendor": "Pepperjam",
+      "category": "affiliate"
+    },
+    {
+      "domains": [
+        "hotjar.com",
+        "hotjar.io"
+      ],
+      "vendor": "Hotjar",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "fullstory.com",
+        "fs.com"
+      ],
+      "vendor": "FullStory",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "mouseflow.com"
+      ],
+      "vendor": "Mouseflow",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "luckyorange.com",
+        "luckyorange.net"
+      ],
+      "vendor": "Lucky Orange",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "smartlook.com"
+      ],
+      "vendor": "Smartlook",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "contentsquare.com",
+        "contentsquare.net"
+      ],
+      "vendor": "Contentsquare",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "quantummetric.com"
+      ],
+      "vendor": "Quantum Metric",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "logrocket.com",
+        "lr-ingest.io",
+        "lr-in.com"
+      ],
+      "vendor": "LogRocket",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "inspectlet.com"
+      ],
+      "vendor": "Inspectlet",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "vwo.com",
+        "visualwebsiteoptimizer.com"
+      ],
+      "vendor": "VWO",
+      "category": "session-replay"
+    },
+    {
+      "domains": [
+        "gorgias.chat",
+        "gorgias.com",
+        "gorgias.io"
+      ],
+      "vendor": "Gorgias",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "intercom.io",
+        "intercomcdn.com",
+        "intercom.com"
+      ],
+      "vendor": "Intercom",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "zendesk.com",
+        "zdassets.com",
+        "zopim.com"
+      ],
+      "vendor": "Zendesk",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "drift.com"
+      ],
+      "vendor": "Drift",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "tidio.co",
+        "tidiochat.com"
+      ],
+      "vendor": "Tidio",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "tawk.to"
+      ],
+      "vendor": "Tawk.to",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "crisp.chat"
+      ],
+      "vendor": "Crisp",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "kustomer.com",
+        "kustomerapp.com"
+      ],
+      "vendor": "Kustomer",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "livechatinc.com",
+        "livechat.com"
+      ],
+      "vendor": "LiveChat",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "artibot.ai",
+        "artibotcdn.com"
+      ],
+      "vendor": "ArtiBot",
+      "category": "chat"
+    },
+    {
+      "domains": [
+        "klaviyo.com",
+        "klaviyo-media.com"
+      ],
+      "vendor": "Klaviyo",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "attentivemobile.com",
+        "attn.tv"
+      ],
+      "vendor": "Attentive",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "postscript.io"
+      ],
+      "vendor": "Postscript",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "omnisend.com",
+        "omnisnippet1.com",
+        "omnisendlink.com"
+      ],
+      "vendor": "Omnisend",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "mailchimp.com",
+        "list-manage.com",
+        "chimpstatic.com"
+      ],
+      "vendor": "Mailchimp",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "sendlane.com"
+      ],
+      "vendor": "Sendlane",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "drip.com"
+      ],
+      "vendor": "Drip",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "privy.com"
+      ],
+      "vendor": "Privy",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "justuno.com"
+      ],
+      "vendor": "Justuno",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "optinmonster.com"
+      ],
+      "vendor": "OptinMonster",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "optinmate.com"
+      ],
+      "vendor": "Optinmate",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "wonderment.com"
+      ],
+      "vendor": "Wonderment",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "smsbump.com"
+      ],
+      "vendor": "SMSBump",
+      "category": "email-sms"
+    },
+    {
+      "domains": [
+        "stamped.io"
+      ],
+      "vendor": "Stamped",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "yotpo.com"
+      ],
+      "vendor": "Yotpo",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "okendo.io"
+      ],
+      "vendor": "Okendo",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "judge.me"
+      ],
+      "vendor": "Judge.me",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "reviews.io"
+      ],
+      "vendor": "Reviews.io",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "loox.io"
+      ],
+      "vendor": "Loox",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "trustpilot.com"
+      ],
+      "vendor": "Trustpilot",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "feefo.com"
+      ],
+      "vendor": "Feefo",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "bazaarvoice.com"
+      ],
+      "vendor": "Bazaarvoice",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "powerreviews.com"
+      ],
+      "vendor": "PowerReviews",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "socialshopwave.com",
+        "ssw.io"
+      ],
+      "vendor": "SocialShopWave",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "rebuyengine.com"
+      ],
+      "vendor": "Rebuy",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "codeblackbelt.com"
+      ],
+      "vendor": "Frequently Bought Together (Code Black Belt)",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "useamp.com"
+      ],
+      "vendor": "AMP / Upsell",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "reconvert.io"
+      ],
+      "vendor": "ReConvert",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "hextom.com"
+      ],
+      "vendor": "Hextom",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "instantbrandpage.lowfruitsolutions.com",
+        "lowfruitsolutions.com"
+      ],
+      "vendor": "InstantBrandPage (Low Fruit Solutions)",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "zipify.com",
+        "zipifypages.com"
+      ],
+      "vendor": "Zipify",
+      "category": "upsell"
+    },
+    {
+      "domains": [
+        "smile.io"
+      ],
+      "vendor": "Smile.io",
+      "category": "loyalty"
+    },
+    {
+      "domains": [
+        "loyaltylion.com",
+        "loyaltylion.net"
+      ],
+      "vendor": "LoyaltyLion",
+      "category": "loyalty"
+    },
+    {
+      "domains": [
+        "yotpo.com",
+        "swellrewards.com"
+      ],
+      "vendor": "Yotpo Loyalty",
+      "category": "loyalty"
+    },
+    {
+      "domains": [
+        "rechargecdn.com",
+        "rechargeapps.com",
+        "rechargepayments.com"
+      ],
+      "vendor": "Recharge",
+      "category": "functional"
+    },
+    {
+      "domains": [
+        "searchserverapi.com",
+        "searchanise.io"
+      ],
+      "vendor": "Searchanise",
+      "category": "search-merch"
+    },
+    {
+      "domains": [
+        "searchspring.net",
+        "searchspring.io"
+      ],
+      "vendor": "Searchspring",
+      "category": "search-merch"
+    },
+    {
+      "domains": [
+        "nosto.com"
+      ],
+      "vendor": "Nosto",
+      "category": "search-merch"
+    },
+    {
+      "domains": [
+        "klevu.com"
+      ],
+      "vendor": "Klevu",
+      "category": "search-merch"
+    },
+    {
+      "domains": [
+        "algolia.net",
+        "algolia.com",
+        "algolianet.com"
+      ],
+      "vendor": "Algolia",
+      "category": "search-merch"
+    },
+    {
+      "domains": [
+        "verifypass.com",
+        "sheerid.com"
+      ],
+      "vendor": "ID Verification (VerifyPass/SheerID)",
+      "category": "functional"
+    },
+    {
+      "domains": [
+        "sesami.co"
+      ],
+      "vendor": "Sesami (appointment booking)",
+      "category": "functional"
+    },
+    {
+      "domains": [
+        "okendo.io"
+      ],
+      "vendor": "Okendo",
+      "category": "reviews"
+    },
+    {
+      "domains": [
+        "sentry.io",
+        "sentry-cdn.com",
+        "ingest.sentry.io"
+      ],
+      "vendor": "Sentry",
+      "category": "error-monitoring"
+    },
+    {
+      "domains": [
+        "bugsnag.com"
+      ],
+      "vendor": "Bugsnag",
+      "category": "error-monitoring"
+    },
+    {
+      "domains": [
+        "newrelic.com",
+        "nr-data.net"
+      ],
+      "vendor": "New Relic",
+      "category": "error-monitoring"
+    },
+    {
+      "domains": [
+        "datadoghq.com",
+        "datadog-browser-agent"
+      ],
+      "vendor": "Datadog",
+      "category": "error-monitoring"
+    },
+    {
+      "domains": [
+        "config-security.com",
+        "datadome.co",
+        "ddgame.io"
+      ],
+      "vendor": "DataDome",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "perimeterx.net",
+        "px-cloud.net",
+        "human.com",
+        "humansecurity.com"
+      ],
+      "vendor": "HUMAN/PerimeterX",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "riskified.com"
+      ],
+      "vendor": "Riskified",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "signifyd.com"
+      ],
+      "vendor": "Signifyd",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "forter.com"
+      ],
+      "vendor": "Forter",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "kaptcha.com",
+        "hcaptcha.com"
+      ],
+      "vendor": "hCaptcha",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "recaptcha.net",
+        "gstatic.com/recaptcha"
+      ],
+      "vendor": "reCAPTCHA",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "domains": [
+        "shop.app",
+        "shoppromise.com"
+      ],
+      "vendor": "Shop Pay / Shop app",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "paypal.com",
+        "paypalobjects.com",
+        "paypal.cn"
+      ],
+      "vendor": "PayPal",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "stripe.com",
+        "stripe.network",
+        "js.stripe.com"
+      ],
+      "vendor": "Stripe",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "klarna.com",
+        "klarnaservices.com",
+        "klarnacdn.net"
+      ],
+      "vendor": "Klarna",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "afterpay.com",
+        "clearpay.co.uk"
+      ],
+      "vendor": "Afterpay/Clearpay",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "affirm.com"
+      ],
+      "vendor": "Affirm",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "sezzle.com"
+      ],
+      "vendor": "Sezzle",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "amazon-adsystem.com"
+      ],
+      "vendor": "Amazon Ads",
+      "category": "ads-pixel"
+    },
+    {
+      "domains": [
+        "amazonpay.com",
+        "payments-amazon.com"
+      ],
+      "vendor": "Amazon Pay",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "braintreegateway.com",
+        "braintree-api.com"
+      ],
+      "vendor": "Braintree",
+      "category": "payment"
+    },
+    {
+      "domains": [
+        "youtube.com",
+        "youtube-nocookie.com",
+        "ytimg.com",
+        "googlevideo.com"
+      ],
+      "vendor": "YouTube",
+      "category": "video-embed"
+    },
+    {
+      "domains": [
+        "vimeo.com",
+        "vimeocdn.com"
+      ],
+      "vendor": "Vimeo",
+      "category": "video-embed"
+    },
+    {
+      "domains": [
+        "wistia.com",
+        "wistia.net",
+        "wi.st"
+      ],
+      "vendor": "Wistia",
+      "category": "video-embed"
+    },
+    {
+      "domains": [
+        "tolstoy.com",
+        "gotolstoy.com"
+      ],
+      "vendor": "Tolstoy",
+      "category": "video-embed"
+    },
+    {
+      "domains": [
+        "monorail-edge.shopifysvc.com"
+      ],
+      "vendor": "Shopify Analytics (Monorail)",
+      "category": "analytics"
+    },
+    {
+      "domains": [
+        "cdn.shopify.com",
+        "shopifycdn.com",
+        "shopifycloud.com"
+      ],
+      "vendor": "Shopify CDN",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "cloudfront.net",
+        "amazonaws.com"
+      ],
+      "vendor": "AWS/CloudFront",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "jsdelivr.net"
+      ],
+      "vendor": "jsDelivr",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "unpkg.com"
+      ],
+      "vendor": "unpkg",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "cloudflare.com",
+        "cloudflareinsights.com"
+      ],
+      "vendor": "Cloudflare",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "fastly.net"
+      ],
+      "vendor": "Fastly",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "fonts.googleapis.com",
+        "fonts.gstatic.com",
+        "gstatic.com",
+        "googleapis.com"
+      ],
+      "vendor": "Google Fonts/APIs",
+      "category": "cdn"
+    },
+    {
+      "domains": [
+        "typekit.net",
+        "use.typekit.net"
+      ],
+      "vendor": "Adobe Fonts",
+      "category": "cdn"
+    }
+  ],
+  "tracker_cookies": [
+    {
+      "prefix": "_ga",
+      "vendor": "Google Analytics",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_gid",
+      "vendor": "Google Analytics",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_gat",
+      "vendor": "Google Analytics",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_gcl_au",
+      "vendor": "Google Ads",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_gcl_aw",
+      "vendor": "Google Ads",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_fbp",
+      "vendor": "Meta Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_fbc",
+      "vendor": "Meta Pixel",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_tt_enable_cookie",
+      "vendor": "TikTok",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_ttp",
+      "vendor": "TikTok",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "ttcsid",
+      "vendor": "TikTok",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_scid",
+      "vendor": "Snapchat",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_pin_unauth",
+      "vendor": "Pinterest",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_uetsid",
+      "vendor": "Microsoft/Bing",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_uetvid",
+      "vendor": "Microsoft/Bing",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "_rdt_uuid",
+      "vendor": "Reddit",
+      "category": "ads-pixel"
+    },
+    {
+      "prefix": "__kla_id",
+      "vendor": "Klaviyo",
+      "category": "email-sms"
+    },
+    {
+      "prefix": "__attentive",
+      "vendor": "Attentive",
+      "category": "email-sms"
+    },
+    {
+      "prefix": "_attn_",
+      "vendor": "Attentive",
+      "category": "email-sms"
+    },
+    {
+      "prefix": "_hjSession",
+      "vendor": "Hotjar",
+      "category": "session-replay"
+    },
+    {
+      "prefix": "_hj",
+      "vendor": "Hotjar",
+      "category": "session-replay"
+    },
+    {
+      "prefix": "_clck",
+      "vendor": "Microsoft Clarity",
+      "category": "session-replay"
+    },
+    {
+      "prefix": "_clsk",
+      "vendor": "Microsoft Clarity",
+      "category": "session-replay"
+    },
+    {
+      "prefix": "_fs_",
+      "vendor": "FullStory",
+      "category": "session-replay"
+    },
+    {
+      "prefix": "fs_uid",
+      "vendor": "FullStory",
+      "category": "session-replay"
+    },
+    {
+      "prefix": "_rsession",
+      "vendor": "Rebuy",
+      "category": "upsell"
+    },
+    {
+      "prefix": "_ruid",
+      "vendor": "Rebuy",
+      "category": "upsell"
+    },
+    {
+      "prefix": "datadome",
+      "vendor": "DataDome",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "prefix": "_px",
+      "vendor": "HUMAN/PerimeterX",
+      "category": "fraud-fingerprint"
+    },
+    {
+      "prefix": "_shopify_y",
+      "vendor": "Shopify Analytics",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_shopify_s",
+      "vendor": "Shopify Analytics",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_shopify_sa",
+      "vendor": "Shopify Analytics",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_landing_page",
+      "vendor": "Shopify Marketing",
+      "category": "analytics"
+    },
+    {
+      "prefix": "_orig_referrer",
+      "vendor": "Shopify Marketing",
+      "category": "analytics"
+    }
+  ],
+  "functional_cookies": [
+    "cart",
+    "cart_sig",
+    "cart_ts",
+    "cart_currency",
+    "localization",
+    "secure_customer_sig",
+    "_secure_session_id",
+    "keep_alive",
+    "_shopify_essential",
+    "checkout_token"
+  ]
+}
