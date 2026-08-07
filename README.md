@@ -154,6 +154,13 @@ This tool produces technical diagnostics, not legal advice. CIPA litigation
 theories (§631 wiretap, §632 recording, §638.51 pen-register) turn on facts and
 defenses no network capture can resolve. Use the output with counsel.
 
+## Contributing
+
+PRs welcome. Every PR validates the skill's `SKILL.md` against the
+[Agent Skills spec](https://agentskills.io/specification) via
+`.github/scripts/validate_skills.py`. Run the same check before you commit with
+`git config core.hooksPath .githooks`.
+
 ## License
 
 MIT
