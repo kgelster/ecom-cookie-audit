@@ -1,10 +1,13 @@
 # ecom-cookie-audit
 
-Cookie-consent / CIPA audit pipeline for ecommerce storefronts, packaged as an
-agent skill (Claude Code plugin). Built for the wave of CIPA (California
-Invasion of Privacy Act) wiretap and pen-register demand letters hitting online
-stores: it answers, with reproducible evidence, **"what fires before consent,
-what still fires after decline, and what ignores GPC?"**
+**Point it at a store. It answers, with reproducible evidence: what fires
+before consent, what still fires after decline, and what ignores GPC.**
+
+Those are the three questions behind the wave of CIPA (California Invasion of
+Privacy Act) wiretap and pen-register demand letters hitting online stores,
+and the three questions a screenshot of a cookie banner cannot answer. This is
+the audit pipeline that can, packaged as an agent skill (Claude Code plugin,
+or any runtime that reads `SKILL.md`).
 
 **capture → analyze → report**
 
@@ -63,6 +66,16 @@ As a Claude Code plugin:
 /plugin marketplace add kgelster/ecom-cookie-audit
 /plugin install cookie-audit@kgelster-cookie
 ```
+
+For Codex, Cursor, or any other agent that reads `SKILL.md` skills, the
+`skills` CLI installs it straight from this repo:
+
+```
+npx skills add https://github.com/kgelster/ecom-cookie-audit --skill cookie-audit
+```
+
+Or manually: clone this repo and copy `skills/cookie-audit/` into your agent's
+skills directory.
 
 Script dependencies (any Python 3.10+):
 

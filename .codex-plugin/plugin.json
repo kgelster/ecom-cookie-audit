@@ -1,0 +1,38 @@
+{
+  "name": "cookie-audit",
+  "description": "Cookie-consent / CIPA audit pipeline for ecommerce storefronts: four-consent-state HAR capture, deterministic vendor classification, counsel-facing diagnostic report",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kurt Elster",
+    "url": "https://github.com/kgelster"
+  },
+  "homepage": "https://github.com/kgelster/ecom-cookie-audit",
+  "repository": "https://github.com/kgelster/ecom-cookie-audit",
+  "license": "MIT",
+  "keywords": [
+    "shopify",
+    "cookie-consent",
+    "cipa",
+    "privacy",
+    "har",
+    "gpc"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Ecom Cookie Audit",
+    "shortDescription": "Audit what fires before consent, after decline, and under GPC.",
+    "longDescription": "Forensic cookie-consent audit for ecommerce storefronts: Playwright captures the store in four consent states (none, decline, accept, GPC), a versioned vendor registry classifies every request and cookie deterministically, and the output is a counsel-facing diagnostic report. Diagnosis, never legal adjudication.",
+    "developerName": "Kurt Elster",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/kgelster/ecom-cookie-audit",
+    "defaultPrompt": [
+      "Run a cookie consent audit on my store.",
+      "What fires on my site before the visitor touches the consent banner?",
+      "Analyze these HAR files for tracker activity after decline."
+    ]
+  }
+}
