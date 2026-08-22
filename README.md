@@ -68,7 +68,7 @@ As a Claude Code plugin:
 ```
 
 For Codex, Cursor, or any other agent that reads `SKILL.md` skills, the
-`skills` CLI installs it straight from this repo:
+[`skills` CLI](https://agentskills.io) installs it straight from this repo:
 
 ```
 npx skills add https://github.com/kgelster/ecom-cookie-audit --skill cookie-audit
@@ -90,7 +90,9 @@ in litigation) — no Playwright needed for that path.
 ## Usage
 
 See [`skills/cookie-audit/SKILL.md`](skills/cookie-audit/SKILL.md) for the full
-procedure. Short version:
+procedure. If you installed the skill, ask your agent for an audit and let
+`SKILL.md` drive; the commands below are the manual path, run from a clone of
+this repo:
 
 ```bash
 cd skills/cookie-audit
