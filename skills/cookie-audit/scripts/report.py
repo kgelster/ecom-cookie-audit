@@ -62,9 +62,17 @@ def render(f):
 
     # Scope & methodology
     L.append(head("Scope & Methodology"))
-    L.append("Each consent state was captured in a fresh, isolated browser context (cleared "
-             "cache/cookies/storage, no extensions) from a residential IP, then the standard funnel "
-             "was exercised: home → collection → PDP → add-to-cart → cart. States captured:\n")
+    # The HAR alone cannot prove how it was captured. State only what it shows.
+    creators = {st.get("har_creator", "") for st in states.values()}
+    if all(c.startswith("Playwright") for c in creators):
+        L.append("Every HAR was recorded by Playwright, consistent with this kit's `capture.py`, which "
+                 "uses a fresh, isolated browser context (cleared cache/cookies/storage, no extensions) "
+                 "per state and exercises the standard funnel: home → collection → PDP → add-to-cart → "
+                 "cart. The HAR does not record the network it was captured from. States analyzed:\n")
+    else:
+        L.append("These HAR files were supplied for analysis. The capture environment (browser profile, "
+                 "extensions, network, consent interactions) is not known to this tool and was not "
+                 "verified. States analyzed:\n")
     for state, st in states.items():
         gpc = ""
         if state == "gpc":

@@ -137,8 +137,10 @@ def analyze_har(path, store_domains, reg):
             if cname:
                 _record_cookie(cookies, cname, host, fp, reg)
 
+    creator = har["log"].get("creator") or {}
     return {
         "har_file": os.path.basename(path),
+        "har_creator": " ".join(str(creator.get(k, "")) for k in ("name", "version")).strip(),
         "entries": len(entries),
         "gpc_signal_sent": gpc_signal_sent,
         "cookie_data_present": cookie_source_seen,
